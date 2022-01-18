@@ -224,7 +224,7 @@ class LockFile:
 
             if self.__file == 4294967295: raise OSError(_GetMessageError())
 
-            if mode == 'a': self.Seek(0, "end")
+            if mode.startswith('a'): self.Seek(0, "end")
         
         else: # Other systems
             if encoding == None:
